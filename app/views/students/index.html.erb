@@ -1,0 +1,51 @@
+<a href="/students/new" class="btn btn-sm btn-primary mb-2 ml-3">Thêm mới</a>
+
+<table class="table table-striped table-bordered table-hover">
+  <thead class="thead-dark">
+  <tr>
+    <th>STT</th>
+    <th>MHS</th>
+    <th>Họ và tên</th>
+    <th>Lớp</th>
+    <th>Mã sách</th>
+    <th>Tên sách</th>
+    <th>Tên tác giả</th>
+    <th>Tủ sách</th>
+    <th>Số BM</th>
+    <th>Ngày mượn</th>
+    <th>Ngày trả</th>
+    <th>Số ngày</th>
+    <th>Quản lý</th>
+  </tr>
+  </thead>
+
+  <tbody>
+   <% @index=0 %>
+  <% @students.each do |student_120| %>
+  <% @index=@index+1%>
+      <tr>
+        <td>
+            <% @index %>
+        </td>
+
+        <td><%= student_120.mahs %></td>
+        <td><%= link_to student_120.ten, student_path(student_120) %></td>
+        <td><%= student_120.lop %></td>
+        <td><%= student_120.masach %></td>
+        <td><%= student_120.tensach %></td>
+        <td><%= student_120.tacgia %></td>
+        <td><%= student_120.tusach %></td>
+        <td><%= student_120.sobm %></td>
+        <td><%= student_120.ngaymuon %></td>
+        <td><%= student_120.ngaytra %></td>
+        <td><%= student_120.songay %></td>
+
+        <td>
+        <td><%= link_to 'Sửa',edit_student_path(student_120), method: 'get', class:"btn btn-info" %></td>
+          <td><%= link_to 'Xoá', student_path(student_120), method: 'delete', class:"btn btn-danger"  %></td>
+        </td>
+      
+      </tr>
+  <% end %>
+  </tbody>
+</table>

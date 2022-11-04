@@ -1,0 +1,22 @@
+<h3 class="text-center">Thêm mới sinh viên</h3>
+<div class="container">
+    <div class="col-md-12">
+    <%= form_with model: @student do |f|%>
+<%= f.text_field :mahs, placeholder:"Nhap ma hoc sinh", class:"form-control"%>
+<br>
+<%= f.text_field :ten, placeholder:"Nhap ten", class:"form-control"%>
+<br>
+<%= f.text_field :lop, placeholder:"Nhap lop", class:"form-control"%>
+<br>
+<%= f.text_field :masach, placeholder:"Nhap ma sach", class:"form-control"%><br>
+<%= f.text_field :tensach, placeholder:"Nhap ten sach", class:"form-control"%><br>
+<%= f.text_field :tacgia, placeholder:"Nhap tac gia", class:"form-control"%><br>
+<%= f.text_field :tusach, placeholder:"Nhap tu sach", class:"form-control"%><br>
+<%= f.text_field :sobm, placeholder:"Nhap sobm", class:"form-control"%><br>
+<%= f.text_field :ngaymuon, placeholder:"Nhap ngay muon", class:"form-control"%><br>
+<%= f.text_field :ngaytra, placeholder:"Nhap ngay tra", class:"form-control"%><br>
+<%= f.text_field :songay, placeholder:"Nhap so ngay", class:"form-control"%><br>
+<%= f.submit %>
+<% end %>
+</div>
+</div>
